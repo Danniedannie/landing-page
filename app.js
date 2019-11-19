@@ -1,12 +1,20 @@
+const htmlContent = document.querySelectorAll('h2');
+
+for (let i = 0; i < htmlContent.length; i++) {
+    console.dir(htmlContent[i].innerHTML);
+}
+
+
+
 /**
  * 
  * Manipulating the DOM exercise.
  * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
+ * scrolls to anchors from navigation
  * and highlights section in viewport upon scrolling.
  * 
  * Dependencies: None
- * 
+ *
  * JS Version: ES2015/ES6
  * 
  * JS Standard: ESlint
