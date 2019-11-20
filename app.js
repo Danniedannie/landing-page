@@ -1,22 +1,22 @@
 const htmlContent = document.querySelectorAll('h2');
 const ulList = document.querySelectorAll('.navbar_list');
 const newNavElement = document.createElement('div');
-const newTextContent = []
+const newTextContent = [];
 for (let i = 0; i < htmlContent.length; i++) {
     newTextContent.push(htmlContent[i].innerHTML);
 }
 
-for (let i = 0; i < newTextContent.length; i++) {
-    console.log(htmlContent[i]);
+var i;
+var updatedTextContent;
+for (i = 0; i < newTextContent.length; i++) {
+    updatedTextContent = htmlContent[i].innerHTML;
+    console.log(updatedTextContent);
+
 }
 
-//var myJSON = JSON.stringify(newTextContent)
-//ulList.insertAdjacentHTML('beforebegin', newTextContent);
+console.log(updatedTextContent);
 
-
-//ulList.(newTextContent);
-//document.body.appendChild(uList);
-//console.log(newTextContent);
+//document.ulList.appendChild()
 
 /**
  * 
