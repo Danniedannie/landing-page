@@ -1,8 +1,11 @@
 const htmlContent = document.querySelectorAll('h2');
-
+const ulList = document.querySelectorAll('.navbar_list')
+const emptyArray = [];
 for (let i = 0; i < htmlContent.length; i++) {
-    console.dir(htmlContent[i].innerHTML);
+    emptyArray.push(htmlContent[i].innerHTML);
 }
+
+console.log(emptyArray);
 
 
 
