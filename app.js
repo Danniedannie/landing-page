@@ -1,11 +1,13 @@
 const htmlContent = document.querySelectorAll('h2');
-const ulList = document.querySelectorAll('.navbar_list')
-const emptyArray = [];
+const ulList = document.querySelectorAll('.navbar_list');
+const newNavElement = document.createElement('div');
+const newTextContent = [];
 for (let i = 0; i < htmlContent.length; i++) {
-    emptyArray.push(htmlContent[i].innerHTML);
+    newTextContent.push(htmlContent[i].innerHTML);
 }
-
-console.log(emptyArray);
+var myJSON = JSON.stringify(newTextContent)
+    //ulList.insertAdjacentHTML('beforebegin', newTextContent);
+console.log(newTextContent);
 
 
 
@@ -16,7 +18,7 @@ console.log(emptyArray);
  * scrolls to anchors from navigation
  * and highlights section in viewport upon scrolling.
  * 
- * Dependencies: None
+ * Dependencies: No
  *
  * JS Version: ES2015/ES6
  * 
