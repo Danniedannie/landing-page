@@ -1,20 +1,39 @@
 const htmlContent = document.querySelectorAll('h2');
-const ulList = document.querySelectorAll('.navbar_list');
-const newNavElement = document.createElement('div');
+const ul = document.createElement('ul');
+document.getElementById('navbar__list').appendChild(ul);
 const newTextContent = [];
+
 for (let i = 0; i < htmlContent.length; i++) {
     newTextContent.push(htmlContent[i].innerHTML);
+    var li = document.createElement('li');
+    ul.appendChild(li);
+    //li.innerHTML += htmlContent;
+    console.log(htmlContent);
 }
 
-var i;
+console.log(newTextContent)
+
+/*newTextContent.forEach(function(title) {
+    var li = document.createElement('li');
+    ul.appendChild(li);
+    li.innerHTML += title;
+});
+
+console.log(newTextContent);
+
+
+
+
+
+/*var i;
 var updatedTextContent;
 for (i = 0; i < newTextContent.length; i++) {
     updatedTextContent = htmlContent[i].innerHTML;
     console.log(updatedTextContent);
 
-}
+} */
 
-console.log(updatedTextContent);
+//console.log(updatedTextContent);
 
 //document.ulList.appendChild()
 
