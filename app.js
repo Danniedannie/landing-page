@@ -1,4 +1,4 @@
-const htmlContent = document.querySelectorAll('h2');
+const htmlContent = document.querySelectorAll('section');
 const ul = document.createElement('ul');
 var li = document.createElement('li');
 document.getElementById('navbar__list').appendChild(ul);
@@ -7,19 +7,24 @@ const newTextContent = [];
 
 for (let i = 0; i < htmlContent.length; i++) {
     newTextContent.push(htmlContent[i].innerText);
+    console.log(htmlContent);
     var li = document.createElement('li');
     var anchor = document.createElement('a');
     ul.appendChild(li);
-    li.textContent += htmlContent[i].innerHTML;
+    li.textContent += htmlContent[i].dataset.nav;
 
 
 }
 
-li.addEventHandler = ("click", alert("hi"));
 
 
 
 console.log(navbar__list);
+
+
+
+
+//console.log(navbar__list);
 
 
 
