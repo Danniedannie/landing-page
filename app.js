@@ -3,17 +3,23 @@ const ul = document.createElement('ul');
 var li = document.createElement('li');
 document.getElementById('navbar__list').appendChild(ul);
 const newTextContent = [];
+const secondArray = [];
 
 
 for (let i = 0; i < htmlContent.length; i++) {
     newTextContent.push(htmlContent[i].innerText);
     console.log(htmlContent);
     var li = document.createElement('li');
-    var anchor = document.createElement('a');
     ul.appendChild(li);
-    li.textContent += htmlContent[i].dataset.nav;
+    var finalizedData = li.textContent += htmlContent[i].dataset.nav;
 
 
+    for (let x = 0; x < finalizedData.length; x++) {
+        secondArray.push(finalizedData[x].id);
+        console.log(finalizedData)
+            //finalizedData.addEventListener("click", function() { scrollIntoView; }, );
+
+    }
 }
 
 
