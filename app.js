@@ -4,14 +4,15 @@ document.getElementById('navbar__list').appendChild(ul);
 const newTextContent = [];
 
 for (let i = 0; i < htmlContent.length; i++) {
-    newTextContent.push(htmlContent[i].innerHTML);
+    newTextContent.push(htmlContent[i].innerText);
     var li = document.createElement('li');
+    var anchor = document.createElement('a');
     ul.appendChild(li);
-    //li.innerHTML += htmlContent;
-    console.log(htmlContent);
+    li.textContent += htmlContent[i].innerHTML;
+
 }
 
-console.log(newTextContent)
+console.log(navbar__list);
 
 /*newTextContent.forEach(function(title) {
     var li = document.createElement('li');
@@ -21,21 +22,6 @@ console.log(newTextContent)
 
 console.log(newTextContent);
 
-
-
-
-
-/*var i;
-var updatedTextContent;
-for (i = 0; i < newTextContent.length; i++) {
-    updatedTextContent = htmlContent[i].innerHTML;
-    console.log(updatedTextContent);
-
-} */
-
-//console.log(updatedTextContent);
-
-//document.ulList.appendChild()
 
 /**
  * 
