@@ -7,25 +7,30 @@ const secondArray = [];
 
 
 for (let i = 0; i < htmlContent.length; i++) {
-    newTextContent.push(htmlContent[i].innerText);
-    console.log(htmlContent);
+    newTextContent.push(htmlContent[i].innerText)
     var li = document.createElement('li');
     ul.appendChild(li);
     var finalizedData = li.textContent += htmlContent[i].dataset.nav;
+    var finalizedContent2 = htmlContent[i].id;
+
+    li.addEventListener('click', function() {
+        finalizedContent2.scrollIntoView();
+    });
 
 
-    for (let x = 0; x < finalizedData.length; x++) {
-        secondArray.push(finalizedData[x].id);
-        console.log(finalizedData)
-            //finalizedData.addEventListener("click", function() { scrollIntoView; }, );
 
-    }
+    //for (let x = 0; x < finalizedData.length; x++) {
+    //secondArray.push(finalizedData[x].id);
+    //console.log(finalizedData)
+    //finalizedData.addEventListener("click", function() { scrollIntoView(section); }, );
+
 }
 
 
 
 
-console.log(navbar__list);
+
+//console.log(navbar__list);
 
 
 
