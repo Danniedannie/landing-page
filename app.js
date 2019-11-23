@@ -1,7 +1,9 @@
 const htmlContent = document.querySelectorAll('h2');
 const ul = document.createElement('ul');
+var li = document.createElement('li');
 document.getElementById('navbar__list').appendChild(ul);
 const newTextContent = [];
+
 
 for (let i = 0; i < htmlContent.length; i++) {
     newTextContent.push(htmlContent[i].innerText);
@@ -10,17 +12,16 @@ for (let i = 0; i < htmlContent.length; i++) {
     ul.appendChild(li);
     li.textContent += htmlContent[i].innerHTML;
 
+
 }
+
+li.addEventHandler = ("click", alert("hi"));
+
+
 
 console.log(navbar__list);
 
-/*newTextContent.forEach(function(title) {
-    var li = document.createElement('li');
-    ul.appendChild(li);
-    li.innerHTML += title;
-});
 
-console.log(newTextContent);
 
 
 /**
