@@ -5,28 +5,42 @@ document.getElementById('navbar__list').appendChild(ul);
 const newTextContent = [];
 const secondArray = [];
 
-
+//loop through elements to grab the data-nav elements
 for (let i = 0; i < htmlContent.length; i++) {
-    newTextContent.push(htmlContent[i].innerText)
+    newTextContent.push(htmlContent[i].innerText);
+    secondArray.push(htmlContent[i].className);
+    console.log(secondArray);
     var li = document.createElement('li');
     ul.appendChild(li);
+    //console.log(newTextContent);
     var finalizedData = li.textContent += htmlContent[i].dataset.nav;
-    var finalizedContent2 = htmlContent[i].id;
+    //console.log(finalizedData);
+    //var finalizedContent2 = htmlContent[i].id;
 
-    li.addEventListener('click', function() {
-        finalizedContent2.scrollIntoView();
-    });
+    // Loop through the buttons and add the active class to the current/clicked button
+    //console.log(finalizedData);
+    //for (var y = 0; y < newTextContent.length; y++) {
+    //secondArray.push(htmlContent[y].className)
+    //console.log(secondArray);
+    //console.log(newTextContent);
+    //secondArray[y].addEventListener("click", function() {
+    //var current = document.getElementsByClassName("your-active-class");
+    //current[0].className = current[0].className.replace(" your-active-class", "");
+    //this.className += " active";
+    //console.log(current);
 
 
 
-    //for (let x = 0; x < finalizedData.length; x++) {
-    //secondArray.push(finalizedData[x].id);
-    //console.log(finalizedData)
-    //finalizedData.addEventListener("click", function() { scrollIntoView(section); }, );
-
-}
+};
 
 
+// Get the container element
+//var btnContainer = document.getElementById("myDIV");
+
+// Get all buttons with class="btn" inside the container
+//var btns = btnContainer.getElementsByClassName("btn");
+
+// Loop through the buttons and add the active class to the current/clicked button
 
 
 
