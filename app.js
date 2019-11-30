@@ -3,56 +3,23 @@ const ul = document.createElement('ul');
 var li = document.createElement('li');
 document.getElementById('navbar__list').appendChild(ul);
 const newTextContent = [];
-const secondArray = [];
 
 //loop through elements to grab the data-nav elements
 for (let i = 0; i < htmlContent.length; i++) {
-    newTextContent.push(htmlContent[i].innerText);
-    secondArray.push(htmlContent[i].className);
-    console.log(secondArray);
+    newTextContent.push(htmlContent[i]);
     var li = document.createElement('li');
     ul.appendChild(li);
-    //console.log(newTextContent);
+    li.setAttribute('class', htmlContent[i].id);
+    li.addEventListener('click', scrollToSection);
     var finalizedData = li.textContent += htmlContent[i].dataset.nav;
-    //console.log(finalizedData);
-    //var finalizedContent2 = htmlContent[i].id;
 
-    // Loop through the buttons and add the active class to the current/clicked button
-    //console.log(finalizedData);
-    //for (var y = 0; y < newTextContent.length; y++) {
-    //secondArray.push(htmlContent[y].className)
-    //console.log(secondArray);
-    //console.log(newTextContent);
-    //secondArray[y].addEventListener("click", function() {
-    //var current = document.getElementsByClassName("your-active-class");
-    //current[0].className = current[0].className.replace(" your-active-class", "");
-    //this.className += " active";
-    //console.log(current);
-
-
-
+    //scrollTo helper function
+    function scrollToSection() {
+        const placeToGo = document.getElementById(this.classList[0]);
+        x = placeToGo.getBoundingClientRect().y;
+        window.scrollTo(0, x);
+    }
 };
-
-
-// Get the container element
-//var btnContainer = document.getElementById("myDIV");
-
-// Get all buttons with class="btn" inside the container
-//var btns = btnContainer.getElementsByClassName("btn");
-
-// Loop through the buttons and add the active class to the current/clicked button
-
-
-
-//console.log(navbar__list);
-
-
-
-
-//console.log(navbar__list);
-
-
-
 
 /**
  * 
@@ -108,4 +75,4 @@ for (let i = 0; i < htmlContent.length; i++) {
 
 // Scroll to section on link click
 
-// Set sections as active
+// Set sections as action
