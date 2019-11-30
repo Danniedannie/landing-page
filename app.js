@@ -10,14 +10,17 @@ for (let i = 0; i < htmlContent.length; i++) {
     var li = document.createElement('li');
     ul.appendChild(li);
     li.setAttribute('class', htmlContent[i].id);
+    console.log(li)
     li.addEventListener('click', scrollToSection);
     var finalizedData = li.textContent += htmlContent[i].dataset.nav;
 
     //scrollTo helper function
-    function scrollToSection() {
-        const placeToGo = document.getElementById(this.classList[0]);
-        x = placeToGo.getBoundingClientRect().y;
-        window.scrollTo(0, x);
+    function scrollToSection(x) {
+        const placeToGo = document.getElementById(this.classList);
+        console.log(placeToGo)
+        xy = placeToGo.getBoundingClientRect().y + 55;
+        console.log(x);
+        return window.scrollTo(0, xy);
     }
 };
 
