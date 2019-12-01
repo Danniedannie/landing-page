@@ -74,10 +74,10 @@ section {
 
 /* Navigation Styles*/
 
-.navbar__menu li:active {
+.navbar__menu li.active {
     width: 100px;
     height: 20px;
-    background-color: #341a91;
+    background-color: cornflowerblue;
     animation-name: example;
     animation-duration: 10s;
 }
@@ -85,7 +85,7 @@ section {
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    text-align: right;
+    text-align: center;
     background: rgb(0, 13, 60, 2);
 }
 
