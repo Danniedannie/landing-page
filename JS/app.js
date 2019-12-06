@@ -1,22 +1,22 @@
-const htmlContent = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section');
 const ul = document.createElement('ul');
-var li = document.createElement('li');
 document.getElementById('navbar__list').appendChild(ul);
-const newTextContent = [];
 
 //loop through elements to grab the data-nav elements
-for (let i = 0; i < htmlContent.length; i++) {
-    newTextContent.push(htmlContent[i]);
-    var li = document.createElement('li');
-    ul.appendChild(li);
-    li.setAttribute('class', htmlContent[i].id);
-    console.log(li)
-    li.addEventListener('click', scrollToSection);
-    //console.log(li.className);
-    var finalizedData = li.textContent += htmlContent[i].dataset.nav;
+for (let i = 0; i < sections.length; i++) {
+    const section = sections[i];
 
-    //scrollTo helper function
-    function scrollToSection() {
-        location.hash = htmlContent[i].id;
-    }
+    const li = document.createElement('li');
+    li.addEventListener('click', function clickHandler() {
+        location.hash = section.id;
+
+        // add class to section
+        // remove class from sibling sections
+
+        // add class to section links
+        // remove class from sibling section links
+    });
+    li.textContent = section.dataset.nav;
+    ul.appendChild(li);
+
 };
