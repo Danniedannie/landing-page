@@ -112,6 +112,10 @@ section {
     transition: ease 0.3s all;
 }
 
+section.active {
+    background-color: cornflowerblue !important;
+}
+
 
 /* Header Styles */
 
