@@ -37,26 +37,32 @@ for (let i = 0; i < sections.length; i++) {    
     const section = sections[i];    
     const li = document.createElement('li');    
     li.setAttribute('id', section.dataset.nav)    
-    li.addEventListener('click', function clickHandler() {        
-        location.hash = section.id;   
-        console.log(this.id)   
-        const currentSection = document.querySelector(`[data-nav=${this.id}]`);      
-        // remove class from sibling sections 
-        const allSections = document.querySelectorAll('section');      
+    li.addEventListener('click', function clickHandler() {     
+        location.hash = section.id;
+
+        currentSection = document.querySelector(`[data-nav="${this.id}"]`);
+
+        console.log(currentSection)    
+        const allSections = document.querySelectorAll('section');
+        const allSectionArray = Array.prototype.slice.call(allSections);
+
+        // remove class from sibling sections
+              
         allSections.forEach((section) => {        
-                console.log(section)        
-                section.classList.remove('active');      
-            })       
-            // add class to section
-                   currentSection.classList.add('active');      
-        const allLi = document.querySelectorAll('li');   
-        console.log(this) 
+            console.log(section)        
+            section.classList.remove('active');      
+        })       
+
+        // add class to section
+        currentSection.classList.add('active');
+
+        const allLi = ul.querySelectorAll('li');      
         allLi.forEach((li) => {        
                 console.log(li)        
-                li.classList.remove('active');      
+                li.classList.remove('active');     
             })        
             // remove class from sibling section links
-              this.classList.add('active');    
+        this.classList.add('active');    
     });    
     li.textContent = section.dataset.nav;    
     ul.appendChild(li);
